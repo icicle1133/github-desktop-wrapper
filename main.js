@@ -18,7 +18,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
-  // Allow HID access for hardware security keys
+  // Allow HID access for hardware security keys (this doesn't work, idk what im doing)
   session.defaultSession.on('select-hid-device', (event, details, callback) => {
     event.preventDefault();
     // Auto-select the first available HID device (or build a picker UI)
